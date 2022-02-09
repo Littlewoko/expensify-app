@@ -3,11 +3,11 @@ import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 
 // Component Imports
 import Header from '../components/Header';
-import Dashboard from '../components/Dashboard';
-import Create from '../components/Create';
-import Edit from '../components/Edit';
-import Help from '../components/Help';
-import NotFound from '../components/NotFound';
+import Dashboard from '../components/ExpenseDashboardPage';
+import Create from '../components/AddExpensePage';
+import Edit from '../components/EditExpensePage';
+import Help from '../components/HelpPage';
+import NotFound from '../components/NotFoundPage';
 
 const AppRouter = () => (
     <BrowserRouter>
