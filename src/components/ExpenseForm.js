@@ -90,7 +90,7 @@ export default class ExpenseForm extends React.Component {
                     >
                     </textArea>
                     <button>
-                        Add Expense
+                        Submit
                     </button>
                 </form>
             </div>
