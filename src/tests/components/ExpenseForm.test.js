@@ -3,6 +3,7 @@ import { shallow } from 'enzyme'
 import toJSON from 'enzyme-to-json'
 import ExpenseForm from '../../components/ExpenseForm'
 import expenses from '../fixtures/expenses'
+import moment from 'moment'
 
 test('Should render expense form correctly', () => {
     const wrapper = shallow(<ExpenseForm />)
@@ -72,4 +73,18 @@ test('Should call onSubmit prop for valid form submission', () => {
         note: expenses[0].note,
         createdAt: expenses[0].createdAt
     })
+})
+
+test('Should set new date on date change', () => {
+    const now = moment()
+    const wrapper = shallow(<ExpenseForm />)
+    wrapper.find('SingleDatePicker').prop('onDateChange')(now)
+    expect(wrapper.state('createdAt')).toEqual(now)
+})
+
+test('Should set calander focus on focus change', () => {
+    const focused = true
+    const wrapper = shallow(<ExpenseForm />)
+    wrapper.find('SingleDatePicker').prop('onFocusChange')({ focused })
+    expect(wrapper.state('calenderFocused')).toBe(focused)
 })
