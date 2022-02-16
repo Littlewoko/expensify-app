@@ -56,7 +56,7 @@ test('Should edit an expense', () => {
 
     const action = {
         type: 'EDIT_EXPENSE',
-        id: '1',
+        id: expenses[0].id,
         updates
     }
 
