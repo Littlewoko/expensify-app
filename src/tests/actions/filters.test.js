@@ -44,3 +44,10 @@ test('Should setup text filter action object with passed value', () => {
         text
     })
 })
+
+test('Should setup text filter action object with default value', () => {
+    expect(setTextFilter()).toEqual({
+        type: 'SET_TEXT_FILTER',
+        text: ''
+    })
+})
