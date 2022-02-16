@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render 404 Not Found component 1`] = `
+<div>
+  404
+</div>
+`;
