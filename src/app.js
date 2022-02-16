@@ -12,6 +12,7 @@ import getVisibleExpenses from './selectors/expenses';
 // CSS imports
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
+import 'react-dates/lib/css/_datepicker.css'
 
 const store = configureStore()
 store.dispatch(addExpense({ description: 'Water Bill', amount: 500 }))
