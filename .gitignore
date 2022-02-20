@@ -76,3 +76,7 @@ typings/
 .fusebox/
 node_modules
 playground/
+public/bundle.js
+public/bundle.js.map
+public/styles.css
+public/styles.css.map
