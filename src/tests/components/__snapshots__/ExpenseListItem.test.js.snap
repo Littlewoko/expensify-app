@@ -1,24 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render Expense List Item 1`] = `
-<div>
-  <Link
-    replace={false}
-    to="/edit/1"
-  >
-    <h3>
-      coffee
-    </h3>
-  </Link>
-  <p>
-    £
-    2.5
-     - 
-    0
-  </p>
-</div>
-`;
-
 exports[`Should render Expense List Item with expense 1`] = `
 <div>
   <Link
@@ -31,9 +12,9 @@ exports[`Should render Expense List Item with expense 1`] = `
   </Link>
   <p>
     £
-    2.5
-     - 
-    0
+    2.50
+    -
+    January 1st, 1970
   </p>
 </div>
 `;
