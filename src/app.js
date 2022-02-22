@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import AppRouter from './routers/AppRouter'
 
+// Database Import
+import './firebase/firebase'
+
 // Redux imports
 import { Provider } from 'react-redux'
 import configureStore from './store/configureStore'
 import { addExpense, removeExpense, editExpense } from './actions/expenses';
 import { setTextFilter } from './actions/filters';
 import getVisibleExpenses from './selectors/expenses';
+
 
 // CSS imports
 import 'normalize.css/normalize.css';
