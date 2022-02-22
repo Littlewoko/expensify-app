@@ -3,7 +3,7 @@ import getExpensesTotal from "../../selectors/expenses-total";
 
 test('Should return 0 if no expenses', () => {
     const result = (getExpensesTotal([]))
-
+    
     expect(result).toBe(0)
 })
 
@@ -11,7 +11,7 @@ test('Should correctly add up a single expense', () => {
     const singleExpense = [expenses[0]]
     const expected = expenses[0].amount
     const result = (getExpensesTotal(singleExpense))
-
+    
     expect(result).toBe(expected)
 })
 
@@ -21,6 +21,6 @@ test('Should correctly add up multiple expenses', () => {
         expected = expected + expenses[i].amount
     }
     const result = (getExpensesTotal(expenses))
-
+    
     expect(result).toBe(expected)
 })
