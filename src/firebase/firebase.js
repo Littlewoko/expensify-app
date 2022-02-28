@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { get, getDatabase, onValue, onChildRemoved, onChildChanged, push, ref, remove, set, update } from "firebase/database";
+import { getDatabase } from "firebase/database";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -25,44 +25,4 @@ const app = initializeApp(firebaseConfig);
 
 const database = getDatabase();
 
-const expenses = [{
-    description: 'coffee',
-    note: 'coffee note',
-    amount: 1234,
-    createdAt: 0
-}, {
-    description: 'water',
-    note: 'water note',
-    amount: 5678,
-    createdAt: 5
-}, {
-    description: 'tea',
-    note: 'tea note',
-    amount: 12938,
-    createdAt: 9
-}]
-
-// for(let i = 0; i< expenses.length; i++) {
-//     push(ref(database, 'expenses'), expenses[i])
-// }
-
-onValue(ref(database, 'expenses'), (snapshot) => {
-    const expenses = []
-
-    snapshot.forEach((childSnapshot) => {
-        expenses.push({
-            id: childSnapshot.key,
-            ...childSnapshot.val()
-        })
-    })
-
-    console.log(expenses)
-})
-
-onChildRemoved(ref(database, 'expenses'), (snapshot) => {
-    console.log(snapshot.key, ' Removed')
-})
-
-onChildChanged(ref(database, 'expenses'), (snapshot) => {
-    console.log(snapshot.key, ' Changed')
-})
+export { app, database as default }
